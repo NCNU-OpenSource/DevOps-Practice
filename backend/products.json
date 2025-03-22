@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Bluetooth Headphones",
+    "description": "Over-ear noise-cancelling headphones with 20-hour battery life.",
+    "price": 89.99,
+    "stock": 120,
+    "category": "Electronics",
+    "brand": "SoundMax",
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "name": "Eco-Friendly Bamboo Toothbrush",
+    "description": "Biodegradable toothbrush made from 100% natural bamboo.",
+    "price": 3.49,
+    "stock": 500,
+    "category": "Personal Care",
+    "brand": "GreenSmile",
+    "rating": 4.7
+  },
+  {
+    "id": 3,
+    "name": "Smart LED Light Bulb",
+    "description": "Color-changing light bulb with voice control and mobile app.",
+    "price": 15.95,
+    "stock": 250,
+    "category": "Home Automation",
+    "brand": "BrightLife",
+    "rating": 4.3
+  },
+  {
+    "id": 4,
+    "name": "Reusable Stainless Steel Water Bottle",
+    "description": "Insulated water bottle that keeps drinks cold for 24 hours.",
+    "price": 24.99,
+    "stock": 200,
+    "category": "Outdoors",
+    "brand": "HydroGo",
+    "rating": 4.8
+  },
+  {
+    "id": 5,
+    "name": "Portable Laptop Stand",
+    "description": "Adjustable and lightweight aluminum laptop stand for desks.",
+    "price": 29.99,
+    "stock": 180,
+    "category": "Office Supplies",
+    "brand": "ErgoLift",
+    "rating": 4.4
+  },
+  {
+    "id": 6,
+    "name": "Organic Cotton T-Shirt",
+    "description": "Soft and breathable t-shirt made from 100% organic cotton.",
+    "price": 19.95,
+    "stock": 300,
+    "category": "Clothing",
+    "brand": "PureWear",
+    "rating": 4.6
+  },
+  {
+    "id": 7,
+    "name": "USB-C Fast Charging Cable",
+    "description": "Durable 1.5m USB-C to USB-C cable with fast charging support.",
+    "price": 12.5,
+    "stock": 450,
+    "category": "Accessories",
+    "brand": "QuickCharge",
+    "rating": 4.2
+  },
+  {
+    "id": 8,
+    "name": "Mini Drone with Camera",
+    "description": "Compact drone with HD camera and remote control for beginners.",
+    "price": 59.99,
+    "stock": 75,
+    "category": "Toys & Gadgets",
+    "brand": "SkyPilot",
+    "rating": 4.1
+  },
+  {
+    "id": 9,
+    "name": "Non-Stick Frying Pan",
+    "description": "24cm frying pan with a ceramic non-stick coating and heat-resistant handle.",
+    "price": 34.9,
+    "stock": 130,
+    "category": "Kitchen",
+    "brand": "ChefPro",
+    "rating": 4.5
+  },
+  {
+    "id": 10,
+    "name": "Daily Planner Journal",
+    "description": "Undated daily planner with goal tracking, habit forming, and gratitude prompts.",
+    "price": 14.99,
+    "stock": 220,
+    "category": "Stationery",
+    "brand": "FocusFlow",
+    "rating": 4.9
+  }
+]
