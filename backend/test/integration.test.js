@@ -1,13 +1,11 @@
-// 使用 Node.js 內建 test 套件
 const test = require('node:test');
 const assert = require('node:assert');
 const supertest = require('supertest');
 const fs = require('fs');
 const path = require('path');
-const app = require('../index'); // 你的 Express app
+const app = require('../index');
 const productsFilePath = path.join(__dirname, './mock-products.json');
 
-// 清除測試資料用的小工具
 function resetProductsFile() {
   const initialData = [
     {
@@ -24,6 +22,7 @@ test('GET /api/products should return limited and reversed products', async (t) 
 
   const res = await supertest(app)
     .get('/api/products?limit=1&reverse=true')
+		.set('identity', 'lsa')
     .expect(200);
 
   assert.ok(Array.isArray(res.body.products));
@@ -42,6 +41,7 @@ test('POST /api/products should add new product', async (t) => {
 
   const res = await supertest(app)
     .post('/api/products')
+		.set('identity', 'lsa')
     .send(newProduct)
     .expect(201);
 
