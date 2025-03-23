@@ -1,0 +1,47 @@
+# a pipeline with test, build, deploy on a host with ssh when the host can be directly connected without ssh vpn
+
+name: CICD
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 20.10.0
+      uses: actions/setup-node@v2
+      with:
+        node-version: 20.10.0
+    - name: Install package
+      run: cd ${{ vars.REPO_PATH }} && npm install
+    - name: Testing
+      run: cd ${{ vars.REPO_PATH }} && npm test
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v3
+        - name: Login
+          run: |
+            docker login --username=${{ secrets.DOCKER_USERNAME }}  --password=${{ secrets.DOCKER_PASSWORD }}
+        - name: Build and Publish
+          run: |
+            docker build . --tag ${{ vars.REGISTRY }}/${{ vars.IMAGE_NAME }}
+            docker push ${{ vars.REGISTRY }}/${{ vars.IMAGE_NAME }}
+  deploy:
+        needs: build
+        name: deploy image
+        runs-on: ubuntu-latest
+        steps:
+        - name: install ssh keys
+          run: |
+            echo "${{ secrets.SSH_PRIVATE_KEY }}" > test.pem
+            chmod 600 test.pem
+            cat test.pem
+        - name: connect and pull
+          run: ssh -i test.pem -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && docker compose pull && docker compose up -d && exit"
+        - name: cleanup
+          run: rm -rf ~/.ssh
