@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
 const server = require("http").Server(app);
-const productsFilePath = './products.json';
+const path = require("path");
+const productsFilePath = process.env.NODE_ENV === 'test'
+  ? path.join(__dirname, 'test/mock-products.json')
+  : path.join(__dirname, 'products.json');
 const products = require(productsFilePath);
 const fs = require("fs");
 const PORT = 6000;
@@ -35,7 +38,6 @@ app.post("/api/products", (req, res) => {
 				return res.status(500).json({ error: "Invalid JSON format in products file" });
 				}
 
-				console.log("newProduct", newProduct);
 				products.push(newProduct);
 
 				// write back to json
@@ -54,3 +56,5 @@ app.listen(PORT, "0.0.0.0", function (err) {
 		if (err) console.log(err);
 		console.log(`Server listening on PORT ${PORT}`);
 		});
+
+module.exports = app;
