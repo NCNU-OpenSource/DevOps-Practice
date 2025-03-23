@@ -2,6 +2,6 @@ version: "3.0"
 
 services:
   devops-practice:
-    image: devops-practice:latest
+    image: fnchiang/devops-practice:latest
     ports:
       - 6001:6000
