@@ -1,5 +1,3 @@
-## Build Image
-- `docker build -t devops-practice . --no-cache`
 ## Workflow
 - Setup the following:
 1. secrets
