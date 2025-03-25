@@ -14,7 +14,7 @@ const auth = new Auth();
 
 const Product = require("./lib/products");
 const productsFilePath = process.env.NODE_ENV === 'test'
-  ? path.join(__dirname, 'tests/integration/mock-products.json')
+  ? path.join(__dirname, 'tests/integration/stub-products.json')
   : path.join(__dirname, 'products.json');
 const product = new Product({ productsFilePath });
 
