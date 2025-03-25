@@ -6,6 +6,8 @@ const path = require('path');
 const app = require('../../index');
 const productsFilePath = path.join(__dirname, './stub-products.json');
 
+
+// 測試前先重置 products.json
 function resetProductsFile() {
   const initialData = [
     {
