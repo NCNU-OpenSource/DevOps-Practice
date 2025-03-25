@@ -1,10 +1,10 @@
 const test = require('node:test');
 const assert = require('node:assert');
 
-const Auth = require("../lib/auth");
+const Auth = require("../../lib/auth");
 const auth = new Auth();
 
-test('GET /api/products should return limited and reversed products', async (t) => {
+test('Auth can successfully verify the identity.', async (t) => {
 
   const mock_next = () => {
   };

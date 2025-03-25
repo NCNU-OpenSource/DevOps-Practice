@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const supertest = require('supertest');
 const fs = require('fs');
 const path = require('path');
-const app = require('../index');
+const app = require('../../index');
 const productsFilePath = path.join(__dirname, './mock-products.json');
 
 function resetProductsFile() {
