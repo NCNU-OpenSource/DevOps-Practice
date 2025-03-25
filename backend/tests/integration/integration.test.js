@@ -4,7 +4,7 @@ const supertest = require('supertest');
 const fs = require('fs');
 const path = require('path');
 const app = require('../../index');
-const productsFilePath = path.join(__dirname, './mock-products.json');
+const productsFilePath = path.join(__dirname, './stub-products.json');
 
 function resetProductsFile() {
   const initialData = [
