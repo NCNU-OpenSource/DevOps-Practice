@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
 		"test": "npm run test:unit && npm run test:integration",
-		"test:unit": "cd tests/unit && NODE_ENV=test node --test",
-		"test:integration": "cd tests/integration && NODE_ENV=test node --test",
+		"test:unit": "cd tests/unit && NODE_ENV=test node --test --experimental-test-coverage",
+		"test:integration": "cd tests/integration && NODE_ENV=test node --test --experimental-test-coverage",
 		"test:load": "k6 run tests/load/test.js"
   },
   "author": "",
