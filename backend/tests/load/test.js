@@ -2,11 +2,11 @@ import http from 'k6/http'
 
 import { check, sleep } from 'k6'
 const target = [
-		/*
+		
     { 
 			name : "NCU",
 			url : 'https://www.ncu.edu.tw',
-    },
+    },/*
     { 
 			name : "NCNU",
 			url : 'https://www.ncnu.edu.tw',
@@ -19,11 +19,11 @@ const target = [
 			name : "NYCU-CSIT",
 			url : 'https://it.cs.nycu.edu.tw',
     },
-		*/
+		
     { 
 			name : "DevOps-Practice - get_products",
 			url : 'http://163.22.17.116:6001/api/products',
-    },
+    },*/
 ]
 
 export const options = {
