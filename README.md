@@ -7,7 +7,9 @@
 當 Pull Request（指定好的 event） 被觸發時，GitHub Actions 會：
 1. 自動進行 Node.js 的單元測試
 2. 測試成功後建置 Docker image 並上傳至 Docker Hub
-3. 最後透過 SSH 部署到遠端主機，執行 `docker compose` 更新服務
+3. SSH 進遠端主機
+4. `docker compose pull`
+5. `docker compose up -d`更新服務
 
 ## Prerequisite
 - 具備 Git 基本操作經驗
