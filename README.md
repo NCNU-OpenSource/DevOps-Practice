@@ -20,7 +20,7 @@
 ## Installation
 
 - Clone 此專案（建議 Fork 一份再 clone）
-	- git clone https://github.com/Anna0131/DevOps-Practice.git
+	- git clone https://github.com/NCNU-OpenSource/DevOps-Practice.git
 
 - 安裝套件
 	- cd DevOps-Practice/backend
