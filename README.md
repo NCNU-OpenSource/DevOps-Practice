@@ -2,6 +2,7 @@
 主要用來練習 DevOps 實作，包含自動化測試、自動建置 Docker image 與自動部署到遠端主機。
 
 透過 GitHub Actions 完成 CI/CD 工作流程，達成開發到部署的自動流程。
+
 HackMD: https://hackmd.io/@nora6633/ByXKqklhkg
 ## Introduction
 當 Pull Request（指定好的 event） 被觸發時，GitHub Actions 會：
